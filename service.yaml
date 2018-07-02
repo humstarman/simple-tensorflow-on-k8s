@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    component: tf-test 
+  name: tf-test
+spec:
+  clusterIP: None 
+  selector:
+    component: tf-test
+  ports:
+    - port: 8888 
+      targetPort: 8888 

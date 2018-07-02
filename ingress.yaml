@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: tf-test 
+spec:
+  rules:
+  - host: my.tf.me 
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: tf-test 
+          servicePort: 8888
